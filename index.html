@@ -1,68 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Clearview Screens LLC</title>
-
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        color: #0d1b2a;
-        background: #ffffff;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clearview Screens LLC – Pool Cage, Aluminum Builds & Custom Murals</title>
+  <meta name="description" content="Clearview Screens LLC specializes in pool cage & lanai rescreening, aluminum carports, screen rooms, Florida rooms, and custom painted murals by local Florida artists.">
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color-scheme: light;
     }
 
-    /* HERO BACKGROUND (YOUR SCREEN ENCLOSURE) */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* PAGE BACKGROUND = SCREEN ENCLOSURE IMAGE (NO WHITE OVERLAY) */
+    body {
+      background-color: #000; /* fallback */
+      background-image: url('screen-enclosure-hero.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #123047;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* no white wrap at all */
+    .page-wrap {
+      min-height: 100vh;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #ffffffdd;
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #dde7f2;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+    }
+
+    .brand span {
+      color: #0d9b8c;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+      transition: background 0.2s;
+    }
+
+    .nav-links a:hover {
+      background: #e2f3f0;
+    }
+
+    .nav-cta {
+      font-size: 0.9rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: none;
+      background: #0d9b8c;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    /* add a little soft shadow under text so it pops on the photo */
+    .content-bg {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25));
+      border-radius: 24px;
+      padding: 2rem 1.5rem;
+      color: #f7fbff;
+    }
+
+    /* HERO */
+
     .hero {
-        width: 100%;
-        height: 100vh;
-        background: url("screen-enclosure-hero.jpg") no-repeat center center/cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        text-align: center;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.75rem;
+      align-items: center;
+      padding-bottom: 2.5rem;
+    }
+
+    .hero-tag {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #8ff3df;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
     }
 
     .hero h1 {
-        font-size: 34px;
-        font-weight: bold;
-        color: white;
-        text-shadow: 0 0 10px black;
+      font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
 
-    .content-section {
-        padding: 30px 20px;
-        background: #f4f8fb;
-        border-radius: 12px;
-        margin: 20px;
+    .hero h1 span {
+      color: #27fac5;
     }
 
-    h2 {
-        margin-top: 10px;
-        color: #0d1b2a;
+    .hero-sub {
+      font-size: 0.95rem;
+      max-width: 32rem;
+      margin-bottom: 1.25rem;
+      color: #e7f3ff;
     }
 
-    .img-box {
-        width: 100%;
-        background: white;
-        margin-top: 10px;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        overflow: hidden;
+    .hero-bullets {
+      list-style: none;
+      display: grid;
+      gap: 0.25rem;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
     }
 
-    .img-box img {
-        width: 100%;
-        display: block;
+    .hero-bullets li::before {
+      content: "• ";
+      color: #27fac5;
+      font-weight: 900;
     }
 
-    .footer {
-        text-align: center;
-        padding: 30px;
-        margin-top: 30px;
-        background: #e8f0f7;
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
     }
-</style
+
+    .btn-primary {
+      background: #0d9b8c;
+      color: white;
+      border-radius: 999px;
+      padding: 0.7rem 1.3rem;
+      border: none;
+      font-size:
