@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clearview Screens LLC – Pool Cage, Aluminum Builds & Custom Murals</title>
   <meta name="description" content="Clearview Screens LLC specializes in pool cage & lanai rescreening, aluminum carports, screen rooms, Florida rooms, and custom painted murals by local Florida artists.">
+
+  <!-- 
+    IMPORTANT FOR IMAGES TO WORK:
+    After you save this file, upload these 8 images
+    INTO THE SAME FOLDER AS index.html with EXACT names:
+
+    1) screen-enclosure-hero.jpg          -> big enclosure you want as page background
+
+    MURAL SECTION:
+    2) mural-mermaid-fountain-finished.jpg   -> finished mermaid fountain
+    3) mural-mermaid-fountain-painting.jpg   -> man painting mermaid fountain
+    4) mural-turtle-bedroom.jpg              -> turtle bedroom mural
+
+    BEFORE / AFTER SECTION:
+    5) before-poolcage-restore.jpg           -> pool cage mid restoration
+    6) after-poolcage-restore.jpg            -> pool cage finished
+    7) before-patio-restore.jpg              -> patio enclosure mid restoration
+    8) after-patio-restore.jpg               -> patio enclosure finished
+  -->
+
   <style>
     :root {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -19,7 +39,12 @@
 
     /* PAGE BACKGROUND = SCREEN ENCLOSURE IMAGE */
     body {
-      background: url('screen-enclosure-hero.jpg') center center / cover fixed no-repeat;
+      background-color: #f4f8fb; /* fallback */
+      background-image: url('screen-enclosure-hero.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
       color: #123047;
       line-height: 1.5;
     }
@@ -511,7 +536,7 @@
             Call or text for fast pricing on rescreens, aluminum projects, or custom mural work. Send photos of your cage or room and we’ll give you a ballpark number same day.
           </p>
           <div class="contact-details">
-            <!-- Swap to your real info -->
+            <!-- Replace with your real info -->
             <p><strong>Phone:</strong> (555) 555-5555</p>
             <p><strong>Email:</strong> info@clearviewscreensllc.com</p>
             <p><strong>Service Area:</strong> Sarasota, Bradenton, Venice, North Port, Port Charlotte & nearby.</p>
