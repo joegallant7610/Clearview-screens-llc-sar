@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clearview Screens LLC – Pool Cage, Aluminum Builds & Custom Murals</title>
-  <meta name="description" content="Clearview Screens LLC specializes in pool cage & lanai rescreening, aluminum carports, screen rooms, Florida rooms, and custom painted murals by local Florida artists.">
+  <title>Clearview Screens LLC – Pool Cages & Custom Murals</title>
+  <meta name="description" content="Clearview Screens LLC handles pool cage & lanai rescreening, aluminum builds, and custom murals across Southwest Florida.">
   <style>
     :root {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color-scheme: light;
     }
 
     * {
@@ -17,80 +16,73 @@
       padding: 0;
     }
 
-    /* PAGE BACKGROUND = SCREEN ENCLOSURE IMAGE (NO WHITE OVERLAY) */
+    /* FULL PAGE BACKGROUND – JUST YOUR CAGE PHOTO */
     body {
-      background-color: #000; /* fallback */
+      min-height: 100vh;
       background-image: url('screen-enclosure-hero.jpg');
-      background-position: center center;
       background-size: cover;
-      background-attachment: fixed;
+      background-position: center center;
       background-repeat: no-repeat;
-      color: #123047;
+      background-attachment: fixed;
+      color: #e9f5ff;
       line-height: 1.5;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
 
-    /* no white wrap at all */
-    .page-wrap {
-      min-height: 100vh;
-    }
-
+    /* HEADER – DARK TRANSPARENT BAR */
     header {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: #ffffffdd;
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid #dde7f2;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
     }
 
     .nav {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 0.75rem 1rem;
+      padding: 0.6rem 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      color: #f7fbff;
     }
 
     .brand {
       font-weight: 800;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
     .brand span {
-      color: #0d9b8c;
+      color: #22f5c5;
     }
 
     .nav-links {
       display: flex;
       gap: 1rem;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     .nav-links a {
-      padding: 0.25rem 0.5rem;
+      padding: 0.2rem 0.5rem;
       border-radius: 999px;
-      transition: background 0.2s;
+      transition: background 0.15s;
     }
 
     .nav-links a:hover {
-      background: #e2f3f0;
+      background: rgba(255, 255, 255, 0.1);
     }
 
     .nav-cta {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       padding: 0.45rem 0.9rem;
       border-radius: 999px;
       border: none;
-      background: #0d9b8c;
-      color: #fff;
+      background: #0ed4a0;
+      color: #022020;
       cursor: pointer;
       font-weight: 600;
     }
@@ -101,49 +93,48 @@
       padding: 1.5rem 1rem 3rem;
     }
 
-    /* add a little soft shadow under text so it pops on the photo */
-    .content-bg {
-      background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25));
-      border-radius: 24px;
-      padding: 2rem 1.5rem;
-      color: #f7fbff;
+    /* GENERIC SECTION PANEL – DARK TRANSPARENT, IMAGE SHOWS THROUGH */
+    section {
+      margin-bottom: 2rem;
+      background: rgba(0, 0, 0, 0.45);
+      border-radius: 18px;
+      padding: 1.5rem 1.25rem;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.7);
     }
 
-    /* HERO */
-
+    /* HERO LAYOUT */
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 1.75rem;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 1.5rem;
       align-items: center;
-      padding-bottom: 2.5rem;
     }
 
     .hero-tag {
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
-      color: #8ff3df;
+      color: #7cf8dd;
       font-weight: 700;
       margin-bottom: 0.75rem;
     }
 
     .hero h1 {
-      font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
+      font-size: clamp(2.1rem, 3vw + 1rem, 2.8rem);
       margin-bottom: 0.75rem;
       color: #ffffff;
-      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+      text-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
     }
 
     .hero h1 span {
-      color: #27fac5;
+      color: #23f3c8;
     }
 
     .hero-sub {
       font-size: 0.95rem;
       max-width: 32rem;
       margin-bottom: 1.25rem;
-      color: #e7f3ff;
+      color: #d7ecff;
     }
 
     .hero-bullets {
@@ -151,12 +142,12 @@
       display: grid;
       gap: 0.25rem;
       font-size: 0.9rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.3rem;
     }
 
     .hero-bullets li::before {
       content: "• ";
-      color: #27fac5;
+      color: #23f3c8;
       font-weight: 900;
     }
 
@@ -168,9 +159,345 @@
     }
 
     .btn-primary {
-      background: #0d9b8c;
-      color: white;
+      background: #0ed4a0;
+      color: #021716;
       border-radius: 999px;
       padding: 0.7rem 1.3rem;
       border: none;
-      font-size:
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 0.7rem 1.1rem;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      background: transparent;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: #f7fbff;
+    }
+
+    .hero-right {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .hero-stat {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 14px;
+      padding: 0.85rem 0.9rem;
+      font-size: 0.85rem;
+      color: #f7fbff;
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-img-placeholder {
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 0.9rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-img-placeholder p {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+    }
+
+    /* HEADINGS + SECTION TEXT */
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+      color: #ffffff;
+      text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    }
+
+    .section-intro {
+      font-size: 0.95rem;
+      max-width: 40rem;
+      margin-bottom: 1.3rem;
+      color: #d6e9ff;
+    }
+
+    /* SERVICES GRID */
+    .services-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+
+    .service-card {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 14px;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #f7fbff;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.9);
+    }
+
+    .service-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .service-card ul {
+      list-style: none;
+      margin-top: 0.4rem;
+    }
+
+    .service-card li::before {
+      content: "✓ ";
+      color: #23f3c8;
+      font-weight: 700;
+    }
+
+    /* MURAL + BEFORE/AFTER GRIDS */
+    .mural-grid,
+    .before-after-grid {
+      display: grid;
+      gap: 0.75rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-top: 1rem;
+    }
+
+    .mural-grid img,
+    .before-after-grid img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      max-height: 320px;
+      display: block;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.95);
+    }
+
+    .mural-note {
+      font-size: 0.8rem;
+      margin-top: 0.4rem;
+      color: #c6ddff;
+    }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: rgba(0, 0, 0, 0.8);
+      color: #f7fbff;
+      border-radius: 18px;
+      padding: 1.5rem 1.25rem;
+      display: grid;
+      gap: 0.75rem;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 1);
+    }
+
+    .contact-details {
+      font-size: 0.95rem;
+    }
+
+    .contact-details strong {
+      display: inline-block;
+      width: 90px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 2rem;
+      font-size: 0.8rem;
+      color: #d6e6ff;
+      text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-right { order: -1; }
+
+      section {
+        padding: 1.2rem 1rem;
+        border-radius: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        CLEARVIEW <span>SCREENS LLC</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#murals">Murals</a>
+        <a href="#before-after">Before & After</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Get a Free Quote
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div>
+        <div class="hero-tag">Florida strong</div>
+        <h1>
+          Pool Cage & Lanai Rescreening
+          <span>+ Aluminum Builds</span>
+        </h1>
+        <p class="hero-sub">
+          Local, hands-on crew serving Southwest Florida with rescreens, aluminum builds, and custom mural work that makes your space actually feel like Florida.
+        </p>
+        <ul class="hero-bullets">
+          <li>Pool cage & lanai rescreening (18/20, 20/20, Super Screen)</li>
+          <li>Aluminum carports, screen rooms & Florida rooms</li>
+          <li>Custom painted murals by local artists (bedrooms, pool cages, statues)</li>
+        </ul>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+            Call / Text for Fast Estimate
+          </button>
+          <button class="btn-ghost" onclick="document.getElementById('before-after').scrollIntoView({behavior:'smooth'})">
+            View Before & After
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-stat">
+          <strong>Screen & Aluminum Pros</strong>
+          Large-span enclosures, carports, screen rooms, Florida rooms, and repairs on existing structures.
+        </div>
+        <div class="hero-stat">
+          <strong>Custom Art Upgrades</strong>
+          Turn plain screens, walls, and statues into one-of-a-kind pieces with hand-painted murals.
+        </div>
+        <div class="hero-img-placeholder">
+          <p>Project highlight</p>
+          <small>Real pool-cage enclosures and custom art projects completed across Southwest Florida.</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <h2>Services</h2>
+      <p class="section-intro">
+        Everything from basic rescreens to full aluminum builds and custom artwork. One crew, start to finish.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Pool Cage & Lanai Rescreening</h3>
+          <p>Full rescreens and panel repairs using the right mesh for your setup.</p>
+          <ul>
+            <li>18/20 and 20/20 screen</li>
+            <li>Super Screen upgrades</li>
+            <li>Door kits, spline, hardware</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Aluminum Builds & Repairs</h3>
+          <p>New structures and fixes on existing frames.</p>
+          <ul>
+            <li>Carports & covered parking</li>
+            <li>Screen rooms & Florida rooms</li>
+            <li>Beam, post, and gutter repairs</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Custom Murals & Art Pieces</h3>
+          <p>Local artists creating custom one-off pieces for your home or lanai.</p>
+          <ul>
+            <li>Bedroom wall murals</li>
+            <li>Pool-cage screen art</li>
+            <li>Statues, fountains & decor</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOM MURALS -->
+    <section id="murals">
+      <h2>Custom Painted Murals & Sculptures</h2>
+      <p class="section-intro">
+        These are real projects, not stock photos. Underwater bedrooms, mermaid fountains, and pool-cage art painted on site in Southwest Florida.
+      </p>
+
+      <div class="mural-grid">
+        <img src="mural-mermaid-fountain-finished.jpg"
+             alt="Finished mermaid fountain statue with painted base by the pool" />
+
+        <img src="mural-mermaid-fountain-painting.jpg"
+             alt="Artist spray painting a mermaid fountain statue in a pool enclosure" />
+
+        <img src="mural-turtle-bedroom.jpg"
+             alt="Underwater sea turtle bedroom mural with painted ceiling and wall" />
+      </div>
+
+      <p class="mural-note">
+        Want something like this? Send us a pic of your space and we’ll design a custom concept for it.
+      </p>
+    </section>
+
+    <!-- BEFORE & AFTER -->
+    <section id="before-after">
+      <h2>Before & After Snapshots</h2>
+      <p class="section-intro">
+        Real transformations: rusty, tired enclosures turned into clean, Florida-ready outdoor spaces.
+      </p>
+
+      <div class="before-after-grid">
+        <img src="before-poolcage-restore.jpg"
+             alt="Pool cage structure in the middle of restoration with frame exposed" />
+
+        <img src="after-poolcage-restore.jpg"
+             alt="Completed pool cage rescreen with fresh panels and clean frame" />
+
+        <img src="before-patio-restore.jpg"
+             alt="Screen patio enclosure partially torn down during restoration" />
+
+        <img src="after-patio-restore.jpg"
+             alt="Finished screen patio enclosure with clean white panels and trim" />
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="contact-card">
+        <h2>Get a Free On-Site Estimate</h2>
+        <p>
+          Call or text for fast pricing on rescreens, aluminum projects, or custom mural work. Send photos of your cage or room and we’ll give you a ballpark number same day.
+        </p>
+        <div class="contact-details">
+          <!-- Replace with your real info -->
+          <p><strong>Phone:</strong> (555) 555-5555</p>
+          <p><strong>Email:</strong> info@clearviewscreensllc.com</p>
+          <p><strong>Area:</strong> Sarasota, Bradenton, Venice, North Port, Port Charlotte & nearby.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Clearview Screens LLC. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
