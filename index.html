@@ -1,110 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clearview Screens LLC</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-        .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-        .gallery-item { overflow: hidden; border-radius: 0.75rem; transition: transform 0.3s; }
-        .gallery-item:hover { transform: scale(1.05); }
-        .gallery-item img { width: 100%; height: 300px; object-fit: cover; }
-        nav.scrolled { background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        html { scroll-behavior: smooth; }
-    </style>
-</head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="fixed w-full top-0 z-50 bg-white shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="text-2xl font-bold text-blue-600">Clearview Screens LLC</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition">Services</a>
-                    <a href="#gallery" class="text-gray-700 hover:text-blue-600 transition">Gallery</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clearview Screens LLC – Pool Cage, Aluminum Builds & Custom Murals</title>
+  <meta name="description" content="Clearview Screens LLC specializes in pool cage & lanai rescreening, aluminum carports, screen rooms, Florida rooms, and custom painted murals by local Florida artists.">
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color-scheme: light;
+    }
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-gradient text-white pt-24 pb-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Professional Screen Services</h1>
-            <p class="text-xl md:text-2xl mb-8 text-blue-100">Expert screen repair, replacement, and installation for your home</p>
-            <a href="#contact" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition">Get a Free Quote</a>
-        </div>
-    </section>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition">
-                    <div class="text-5xl mb-4">🔧</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Screen Repair</h3>
-                    <p class="text-gray-600">Fast and reliable repairs for damaged window and door screens</p>
-                </div>
-                <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition">
-                    <div class="text-5xl mb-4">🪟</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Custom Screens</h3>
-                    <p class="text-gray-600">Custom-sized screens built to fit any window or door perfectly</p>
-                </div>
-                <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition">
-                    <div class="text-5xl mb-4">✨</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Installation</h3>
-                    <p class="text-gray-600">Professional installation services for all screen types</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    /* PAGE BACKGROUND = SCREEN ENCLOSURE IMAGE */
+    body {
+      background: url('screen-enclosure-hero.jpg') center center / cover fixed no-repeat;
+      color: #123047;
+      line-height: 1.5;
+    }
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Our Work</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item shadow-lg"><img src="/KIMG0010.jpg" alt="Screen work 1"></div>
-                <div class="gallery-item shadow-lg"><img src="/KIMG0017.jpg" alt="Screen work 2"></div>
-                <div class="gallery-item shadow-lg"><img src="/KIMG0036.jpg" alt="Screen work 3"></div>
-                <div class="gallery-item shadow-lg"><img src="/KIMG0046.jpg" alt="Screen work 4"></div>
-                <div class="gallery-item shadow-lg"><img src="/KIMG0042-1.jpg" alt="Screen work 5"></div>
-                <div class="gallery-item shadow-lg"><img src="/1002141450c.jpg" alt="Screen work 6"></div>
-                <div class="gallery-item shadow-lg"><img src="/1002141450d.jpg" alt="Screen work 7"></div>
-                <div class="gallery-item shadow-lg"><img src="/1022141823a.jpg" alt="Screen work 8"></div>
-                <div class="gallery-item shadow-lg"><img src="/1022141823b.jpg" alt="Screen work 9"></div>
-                <div class="gallery-item shadow-lg"><img src="/20200918_005801_HDR.jpg" alt="Screen work 10"></div>
-                <div class="gallery-item shadow-lg"><img src="/FB_IMG_1665740706770.jpg" alt="Screen work 11"></div>
-                <div class="gallery-item shadow-lg"><img src="/IMG_20220804_165527468_HDR.jpg" alt="Screen work 12"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Get In Touch</h2>
-            <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
-                <p class="text-xl text-gray-700 mb-6">Ready to restore your screens?</p>
-                <p class="text-3xl font-bold text-blue-600 mb-4">(555) 123-4567</p>
-                <p class="text-gray-600 mb-6">info@clearviewscreens.com</p>
-                <p class="text-gray-600">Serving the local area with quality screen services</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2024 Clearview Screens LLC. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+    a {
+      text-decoration: none;
+      color: inherit
