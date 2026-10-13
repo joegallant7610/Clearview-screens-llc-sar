@@ -615,7 +615,7 @@
         <div class="card">
           <h3>Custom Painted Murals on Screen Enclosures</h3>
           <p>
-            Take your view from “plain cage” to “backyard resort”. We hand-paint
+            Take your view from “plain cage” to “backyard resort”. We -paint
             murals directly on your screen enclosure – from sunsets and beach
             scenes to custom designs that match your home.
           </p>
@@ -625,6 +625,49 @@
             <span class="chip">Custom themes for kids’ areas</span>
             <span class="chip">One-of-a-kind designs</span>
           </div>
+  
+<style>
+.mural-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+.mural-gallery figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #263244;
+  border-radius: 14px;
+  background: #07101d;
+}
+.mural-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.mural-gallery figcaption {
+  padding: 10px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  .mural-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+          
+<div class="mural-gallery">
+  <figure>
+    <img src="mural-beach-sunset.jpg" alt="Illustrative beach sunset mural on a pool enclosure">
+    <figcaption>Beach &amp; Gulf Scenes</figcaption>
+  </figure>
+  <figure>
+    <img src="mural-tropical-beach.jpg" alt="Illustrative tropical beach mural on a screened lanai">
+    <figcaption>Custom Tropical Designs</figcaption>
+  </figure>
+</div>
           <p class="pill-note">
             Ask about adding a mural when you schedule your rescreening – it
             costs less when we do everything in one trip.
