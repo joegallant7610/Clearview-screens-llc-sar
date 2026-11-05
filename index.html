@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  Pool Cage Rescreening & Screen Repair | Ellenton & Lakewood Ranch
+  <title>Pool Cage Rescreening &amp; Screen Repair | Ellenton &amp; Lakewood Ranch</title>
 <meta name="description" content="Clearview Screens LLC provides pool cage rescreening, screen repair, window screens, screen doors, and patio screen replacement in Ellenton and Lakewood Ranch, FL." />
   <!-- Open Graph -->
   <meta property="og:title" content="Clearview Screens LLC – Pool Cages & Custom Murals" />
@@ -858,14 +858,30 @@
 <img src="17859892225556232879605409482754.jpg" alt="Screen room before and after" loading="lazy" style="width:100%;border-radius:12px;">
 
 <img src="17859893064266468283696873779341.jpg" alt="Finished screen room" loading="lazy" style="width:100%;border-radius:12px;">
-</div
+
 </section>
   
->
 
 
-    <section id="contact">
-      <div class="section-label">Get a quote</div>
+
+    
+          <section id="reviews">
+      <div class="section-label">Customer Reviews</div>
+      <h2 class="section-title">What Our Customers Say About Us</h2>
+      <p class="section-intro">
+        See why homeowners trust Clearview Screens LLC for pool cage
+        rescreening, screen repairs and aluminum work.
+      </p>
+
+      <div id="reviewsWidgetContainer">
+        <iframe
+          id="reviewsWidget"
+          style="width: 100%; border: none; min-height: 300px;"
+          title="Reviews Widget">
+        </iframe>
+      </div>
+          </section>
+      <section id="contact"><div class="section-label">Get a quote</div>
       <h2 class="section-title">Ready to Freshen Up Your Pool Cage or Lanai?</h2>
 
       <div class="cta-box">
@@ -905,5 +921,46 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script><script>
+(function() {
+  function getPageSizeForWidth(width) {
+    if (width < 450) return 1;
+    if (width < 675) return 2;
+    if (width < 918) return 3;
+    if (width < 1144) return 4;
+    return 5;
+  }
+
+  function setIframeSrc() {
+    const iframe = document.getElementById("reviewsWidget");
+    const container = document.getElementById("reviewsWidgetContainer");
+
+    if (!iframe || !container) return;
+
+    const width = container.offsetWidth;
+    if (width === 0) return;
+
+    const pageSize = getPageSizeForWidth(width);
+
+    const expectedSrc =
+      "https://www.localmarketingmanager.com/api/reviews/clearview-screens-llc-review-widget?pageSize=" + pageSize;
+
+    if (iframe.src !== expectedSrc) {
+      iframe.src = expectedSrc;
+    }
+  }
+
+  function init() {
+    setIframeSrc();
+    window.addEventListener("resize", setIframeSrc);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
   </script>
-  
+  </body>
+</html>
