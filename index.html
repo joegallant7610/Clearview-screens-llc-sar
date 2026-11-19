@@ -962,5 +962,165 @@
   }
 })();
   </script>
-  </body>
+  
+<!-- CLEARVIEW SCREENS - FREE ESTIMATE REQUEST FORM -->
+<style>
+#cv-estimate {
+  background: #f5f8fb;
+  color: #06141f;
+  padding: 45px 18px;
+  margin: 35px auto;
+  border-radius: 14px;
+  max-width: 850px;
+  font-family: Arial, sans-serif;
+}
+#cv-estimate h2 {
+  color: #1ea7ff;
+  text-align: center;
+  font-size: 29px;
+}
+#cv-estimate .cv-intro {
+  text-align: center;
+  margin-bottom: 25px;
+}
+#cv-estimate label {
+  display: block;
+  font-weight: bold;
+  margin: 15px 0 6px;
+}
+#cv-estimate input,
+#cv-estimate select,
+#cv-estimate textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 16px;
+  background: white;
+  box-sizing: border-box;
+}
+#cv-estimate textarea {
+  min-height: 110px;
+}
+#cv-estimate .cv-submit {
+  width: 100%;
+  background: #1ea7ff;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 22px;
+  font-size: 17px;
+  font-weight: bold;
+}
+#cv-estimate .cv-submit:active {
+  background: #06141f;
+}
+#cv-estimate .cv-note {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 12px;
+}
+#cv-estimate-button {
+  position: fixed;
+  right: 16px;
+  bottom: 22px;
+  z-index: 9999;
+  background: #1ea7ff;
+  color: white;
+  padding: 14px 19px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 15px #0004;
+}
+</style>
+
+<a id="cv-estimate-button" href="#cv-estimate">
+  FREE ESTIMATE
+</a>
+
+<section id="cv-estimate">
+  <h2>REQUEST A FREE ESTIMATE</h2>
+  <p class="cv-intro">
+    Need pool cage rescreening, screen repairs or aluminum work?
+    Tell us about your project and we'll get back to you!
+  </p>
+
+  <form action="https://formsubmit.co/clearviewscreensllc@gmail.com"
+        method="POST"
+        enctype="multipart/form-data">
+
+    <input type="hidden" name="_subject"
+           value="New Clearview Screens Estimate Request">
+
+    <input type="hidden" name="_template" value="table">
+
+    <label>Full Name *</label>
+    <input type="text" name="Customer Name" required>
+
+    <label>Phone Number *</label>
+    <input type="tel" name="Phone Number" required>
+
+    <label>Email Address *</label>
+    <input type="email" name="email" required>
+
+    <label>Property Address *</label>
+    <input type="text" name="Property Address" required>
+
+    <label>City *</label>
+    <input type="text" name="City" required>
+
+    <label>ZIP Code *</label>
+    <input type="text" name="ZIP Code" required>
+
+    <label>What Service Do You Need? *</label>
+    <select name="Service Requested" required>
+      <option value="">Select a service</option>
+      <option>Pool Cage Rescreening</option>
+      <option>Lanai Rescreening</option>
+      <option>Screen Repair</option>
+      <option>Super Screen Installation</option>
+      <option>No-See-Um Screen</option>
+      <option>Aluminum Frame Repair</option>
+      <option>Pool Cage Repairs</option>
+      <option>Pressure Washing</option>
+      <option>Mobile Home Repairs</option>
+      <option>Carports and Screen Rooms</option>
+      <option>Other</option>
+    </select>
+
+    <label>Tell Us About Your Project</label>
+    <textarea name="Project Description"
+      placeholder="Describe the work you need done..."></textarea>
+
+    <label>Upload Project Photos (Optional)</label>
+    <input type="file" name="Photo 1"
+      accept="image/jpeg,image/png,image/webp">
+
+    <label>Additional Photo</label>
+    <input type="file" name="Photo 2"
+      accept="image/jpeg,image/png,image/webp">
+
+    <label>Additional Photo</label>
+    <input type="file" name="Photo 3"
+      accept="image/jpeg,image/png,image/webp">
+
+    <p class="cv-note">
+      Please keep the combined size of all uploaded photos under 10 MB.
+    </p>
+
+    <button class="cv-submit" type="submit">
+      SUBMIT MY ESTIMATE REQUEST
+    </button>
+
+    <p class="cv-note">
+      Thank you for choosing Clearview Screens LLC!
+      Serving Southwest Florida.
+    </p>
+
+  </form>
+</section>
+<!-- END CLEARVIEW ESTIMATE FORM -->
+</body>
 </html>
